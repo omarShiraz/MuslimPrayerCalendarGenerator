@@ -13,14 +13,13 @@ A Python project to fetch Islamic prayer times for any city using the [Aladhan A
 To get started with this project, follow these steps:
 
 ### Prerequisites
-You need Python 3.x installed on your system. If you don't have it yet, download and install it from the official [Python website](https://www.python.org/downloads/).
 
 Additionally, you will need to install the required dependencies. You can do this by running:
 
 
 pip install requests
 
-###Usage
+## Usage
 Clone this repository to your local machine: or open using colab
 
 
@@ -30,10 +29,6 @@ In the script main.py, replace the city and country values with your desired loc
 
 Run the script to fetch prayer times for the specified year and city or longitude and latitude refer for further details on the API
 https://aladhan.com/prayer-times-api#tag/Monthly-Annual-Prayer-Times-Calendar/paths/~1v1~1calendarByCity~1%7Byear%7D~1%7Bmonth%7D/get
-bash
-Copy code
-python main.py
-This will generate:
 
 A prayer_times.csv file containing the prayer times for each day of the specified year.
 An prayer_times.ics file that contains the events and alarms for the prayer times.
@@ -58,7 +53,7 @@ month: Month for the prayer times (1-12).
 year: Year for the prayer times.
 For more details on the parameters, visit the Aladhan API Documentation.
 
-##Example API Request
+## Example API Request
 If you want to fetch prayer times for Colombo, Sri Lanka for the year 2025 using the Muslim World League method (method=2), you would call the API like this:
 
 Change these values to get the exact prayer time for your region and method of calculation can be change below by chnaging the number
@@ -97,10 +92,10 @@ params = {
     "method": 2,
     "year": 2025
 }
-##ICS Calendar
+## ICS Calendar
 The generated .ics file contains prayer events for each day, with reminders set 10 minutes before the prayer time for the Imam Jama'ah. This can be added to any calendar that supports the iCalendar format (e.g., Google Calendar, Outlook).
 
-##Example ICS Event
+## Example ICS Event
 Here’s an example of how a prayer event will look in the ICS file:
 
 ics
@@ -117,9 +112,9 @@ END:VALARM
 END:VEVENT
 Each prayer time is represented as an event in the calendar with a reminder exactly at prayer time.
 
-###Contributing
+# Contributing
 If you would like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request. Contributions are welcome!
 
-###License
+# License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
